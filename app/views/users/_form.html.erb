@@ -1,0 +1,24 @@
+
+<%= render '/layouts/errors', object: @user %>
+
+<%= form_for(@user) do |f| %>
+  <div class="form-group">
+    <%= f.label :email, class: "col-md-1 control-label" %>
+    <div class="col-md-6">
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <%= f.label :password, class: "col-md-1 control-label"  %>
+    <div class="col-md-6">
+      <%= f.password_field :password, class: "form-control"  %>
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <%= f.label :password_confirmation, class: "col-md-1 control-label"  %>
+    <div class="col-md-6">
+      <%= f.password_field :password_confirmation, class: "form-control"  %>
+    </div>
+  </div><br><br>
+    <%= f.submit(:class => 'btn btn-primary') %>
+<% end %>

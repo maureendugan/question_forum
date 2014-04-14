@@ -12,6 +12,7 @@ gem 'rghost'
 gem 'bcrypt'
 gem 'textacular'
 gem 'turbolinks'
+gem 'devise'
 
 group :development do
   gem 'better_errors'
