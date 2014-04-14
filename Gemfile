@@ -11,7 +11,7 @@ gem 'bootstrap-sass'
 gem 'rghost'
 gem 'bcrypt'
 gem 'textacular'
-
+gem 'turbolinks'
 
 group :development do
   gem 'better_errors'
