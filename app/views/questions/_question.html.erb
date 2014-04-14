@@ -1,6 +1,6 @@
+<%= render '/layouts/errors', object: @question %>
 
-
-<%= form_for @question do |q| %>
+<%= form_for @question, remote: true do |q| %>
   <%= q.label :title %>
   <%= q.text_field :title %>
   </br>
