@@ -1,1 +1,7 @@
 <h1>Welcome to Stack Overflow</h1>
+
+<% if current_user %>
+
+  <%= link_to 'Ask Question!', new_question_path, class: 'btn btn-default' %>
+
+<% end %>
