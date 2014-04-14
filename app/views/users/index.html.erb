@@ -3,9 +3,11 @@
 <% if current_user %>
 
   <%= link_to 'Ask Question!', new_question_path, class: 'btn btn-default', remote: true, id: "newQuestion" %>
+  <div id="errors"></div>
   <ul id="userQuestions">
     <% current_user.questions.each do |q| %>
     <li><%= q.title %></li>
     <% end %>
   </ul>
+
 <% end %>
