@@ -13,6 +13,7 @@ gem 'bcrypt'
 gem 'textacular'
 gem 'turbolinks'
 gem 'devise'
+gem 'meta_request'
 
 group :development do
   gem 'better_errors'

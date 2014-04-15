@@ -1,2 +1,18 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+<h1><%= @question.title %></h1>
+<p><%= @question.body %></p>
+
+
+<%= form_for @response do |r| %>
+  <%= r.label :answer %>
+  <%= r.text_field :answer %>
+  <%= r.hidden_field :user_id, value: current_user.id %>
+  </br>
+  <%= r.hidden_field :question_id, value: @question.id %>
+  <%= r.submit "Submit" %>
+<% end %>
+
+<ul id="questionResponses">
+  <% @question.responses.each do |response| %>
+    <li><%= response.answer %></li>
+  <% end %>
+</ul>

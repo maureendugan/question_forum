@@ -1,0 +1,11 @@
+<%= render '/layouts/errors', object: @response %>
+
+<%= form_for @response, remote: true do |r| %>
+  <%= r.label :answer %>
+  <%= r.text_field :answer %>
+
+  <%= r.hidden_field :user_id, value: current_user.id %>
+  </br>
+
+  <%= r.submit "Submit" %>
+<% end %>

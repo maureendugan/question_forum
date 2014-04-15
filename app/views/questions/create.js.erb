@@ -1,8 +1,8 @@
 
 <% if @question.save %>
-  $('#userQuestions').append('<li><%= @question.title %></li>')
-  $('#new_question').remove()
-  $('#errors').html('')
+  $('#userQuestions').append('<li><%= @question.title %></li>');
+  $('#new_question').remove();
+  $('#errors').html('');
 <% else %>
   $('#errors').html('<%= j render("layouts/errors", object: @question) %>');
 <% end %>
